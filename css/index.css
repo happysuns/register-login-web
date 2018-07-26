@@ -1,0 +1,117 @@
+body, article, aside, section, main, form {
+    margin: 0;
+    padding: 0;
+}
+
+h1, p{
+    margin: 15px 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background: url("../img/background.jpg") no-repeat center;
+    background-size: cover;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/*浮动盒子*/
+.floatBox {
+    width: 500px;
+    height: 340px;
+}
+
+/*右边form盒子*/
+.floatBox .formBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    height: 100%;
+    background: rgba(29, 29, 29, .4);
+}
+
+.floatBox .formBox .login-form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* 右边form logo 描述*/
+.floatBox .formBox .logo,
+.floatBox .formBox .descr {
+    text-align: center;
+    color: #fff;
+}
+
+.floatBox .formBox .logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.floatBox .formBox .descr {
+    font-size: 10px;
+}
+
+/*form*/
+.floatBox .formBox .form {
+    margin: 25px auto 0;
+    width: 240px;
+    font-size: 0;
+    text-align: center;
+}
+
+/*input*/
+.floatBox .formBox .form section {
+    margin: 10px 0;
+}
+
+.floatBox .formBox .form label {
+    position: absolute;
+    display: inline-block;
+    margin-left: 10px;
+    text-align: right;
+    line-height: 35px;
+    font-size: 14px;
+    color: #333;
+}
+
+.floatBox .formBox .form input {
+    padding: 8px 8px 8px 60px;
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    border-radius: 5px;
+    color: rgba(134, 134, 134, 1);
+}
+/*提交按钮*/
+.floatBox .formBox .form .submitBtn {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: #69c0ff;
+    color: #fff;
+    padding: 10px 0;
+}
+/*注册账户 忘记秘密*/
+.floatBox .formBox .form .service {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.floatBox .formBox .form .service a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.floatBox .formBox .form .service a:hover {
+    text-decoration: underline;
+}

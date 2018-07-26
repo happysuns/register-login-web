@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录-上福数据</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.4.1/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.4.1/umd/react-dom.production.min.js"></script>
+
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <meta id="eqMobileViewport" name="viewport" content="width=320, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            // orientationchange 事件是在用户水平或者垂直翻转设备（即方向发生变化）时触发的事件。
+            // onresize 事件会在窗口或框架被调整大小时发生。
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                window.clientWidth = docEl.clientWidth;
+                if (!window.clientWidth) return;
+                docEl.style.fontSize = 40 * (window.clientWidth / 640) + 'px';
+                window.base = 40 * (window.clientWidth / 640);
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<body>
+<main>
+    <section class="floatBox">
+        <aside class="formBox"
+               id="form"
+        >
+        </aside>
+    </section>
+</main>
+<div id="example"></div>
+<script type="text/babel">
+    class NormalLoginForm extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1 className="logo">上福数据</h1>
+                    <p className="descr">上福数据 是金融圈最具影响力的 技术服务供应商</p>
+                    <form className="form">
+                        <section>
+                            <label>帐号:</label>
+                            <input type="text"
+                                   name="name"
+                                   id="name"
+                                   placeholder="邮箱/手机号"
+                                   required="required"
+                            />
+                        </section>
+                        <section>
+                            <label>密码:</label>
+                            <input type="password"
+                                   name="password"
+                                   id="password"
+                                   required="required"
+                            />
+                        </section>
+                        <p className="service">
+                            <a href="">注册账户</a>
+                            <a href="">忘记密码</a>
+                        </p>
+                        <button className="submitBtn">登录</button>
+                    </form>
+                </div>
+            );
+        }
+    };
+
+    ReactDOM.render(
+        <NormalLoginForm/>,
+        document.getElementById('form')
+    );
+</script>
+</body>
+</html>
