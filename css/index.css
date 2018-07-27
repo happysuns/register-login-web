@@ -3,9 +3,14 @@ body, article, aside, section, main, form {
     padding: 0;
 }
 
-h1, p{
+h1, p {
     margin: 15px 0;
     padding: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
 }
 
 main {
@@ -14,104 +19,170 @@ main {
     justify-content: center;
     width: 100%;
     min-height: 100vh;
+}
+
+/*背景图片*/
+main .background {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    z-index: -1;
+    filter: blur(2px);
     background: url("../img/background.jpg") no-repeat center;
     background-size: cover;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
-}
-
 /*浮动盒子*/
 .floatBox {
-    width: 500px;
-    height: 340px;
+    position: relative;
+    width: 450px;
+    height: 400px;
+    overflow: hidden;
+    background: rgba(29, 29, 29, .4);
+    font-size: 0;
 }
 
-/*右边form盒子*/
-.floatBox .formBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*----login盒子------*/
+/*左边form盒子*/
+.floatBox .login {
     padding: 16px;
     height: 100%;
-    background: rgba(29, 29, 29, .4);
-}
-
-.floatBox .formBox .login-form {
-    width: 50%;
-    margin: 0 auto;
 }
 
 /* 右边form logo 描述*/
-.floatBox .formBox .logo,
-.floatBox .formBox .descr {
+.floatBox .login .logo,
+.floatBox .login .descr {
     text-align: center;
     color: #fff;
 }
 
-.floatBox .formBox .logo {
+.floatBox .login .logo {
     font-size: 30px;
     font-weight: 700;
 }
 
-.floatBox .formBox .descr {
+.floatBox .login .descr {
     font-size: 10px;
 }
 
-/*form*/
-.floatBox .formBox .form {
-    margin: 25px auto 0;
-    width: 240px;
-    font-size: 0;
-    text-align: center;
+/*form表单*/
+.floatBox .login .form {
+    margin: 40px auto 0;
+    width: 80%;
 }
 
 /*input*/
-.floatBox .formBox .form section {
+.floatBox .login section {
+    position: relative;
     margin: 10px 0;
 }
 
-.floatBox .formBox .form label {
+.floatBox .login label {
     position: absolute;
+    right: 80%;
     display: inline-block;
-    margin-left: 10px;
     text-align: right;
-    line-height: 35px;
+    line-height: 40px;
     font-size: 14px;
     color: #333;
 }
 
-.floatBox .formBox .form input {
-    padding: 8px 8px 8px 60px;
-    height: 24px;
-    line-height: 24px;
+.floatBox .login input {
+    width: 100%;
+    padding-left: 75px;
+    height: 40px;
+    box-sizing: border-box;
     border: none;
     border-radius: 5px;
     color: rgba(134, 134, 134, 1);
 }
+
 /*提交按钮*/
-.floatBox .formBox .form .submitBtn {
+.floatBox .login .submitBtn {
     width: 100%;
+    padding: 10px 0;
+    margin: 8px 0;
     border-radius: 5px;
     border: none;
     background: #69c0ff;
     color: #fff;
-    padding: 10px 0;
+    transition: background .3s ease-in-out;
 }
+
+.floatBox .login .submitBtn:hover {
+    background: #32a5f9;
+    transition: background .3s ease-in-out;
+}
+
 /*注册账户 忘记秘密*/
-.floatBox .formBox .form .service {
+.floatBox .login .service {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
 }
 
-.floatBox .formBox .form .service a {
+.floatBox .login .service a {
     font-size: 14px;
     color: #fff;
 }
 
-.floatBox .formBox .form .service a:hover {
+.floatBox .login .service a:hover {
     text-decoration: underline;
+}
+
+/*----------右边注册 忘记密码--------*/
+.floatBox .register {
+    width: 100%;
+    height: 380px;
+    box-sizing: border-box;
+    position: absolute;
+    left: -550px;
+    top: 0;
+}
+
+/*返回按钮 盒子*/
+.floatBox .login .backButton {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    width: 80px;
+    height: 14px;
+}
+
+/*返回按钮 img*/
+.floatBox .login .backButton .backImg {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../img/back.png") no-repeat center;
+    background-size: contain;
+}
+
+/*button hover改变img*/
+.floatBox .login .backButton:hover .backImg {
+    background: url("../img/backHove.png") no-repeat center;
+    background-size: contain;
+}
+
+/*button hover改变title*/
+.floatBox .login .backButton:hover .backTitle {
+    cursor: pointer;
+    color: #69c0ff;
+    text-decoration: underline;
+}
+
+/*返回按钮title样式*/
+.floatBox .login .backButton .backTitle {
+    font-size: 14px;
+    color: #fff;
+}
+
+/*验证码button样式*/
+.floatBox .login .verificationButton {
+    padding: 12px 10px;
+    position: absolute;
+    right: 0;
+    border: none;
+    background: #32a5f9;
+    color: #fff;
 }
