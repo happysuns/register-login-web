@@ -96,7 +96,6 @@
          * 返回登陆
          */
         backLogin(formId) {
-            console.log(formId);
             this.animationTranslate('#login', 0);
             this.animationTranslate(`#${formId}`, 0);
         }
@@ -138,7 +137,7 @@
                                 </p>
                             ) || (
                                 <section className="backButton"
-                                         onClick={() => this.backLogin(id).bind(this)}
+                                         onClick={() => this.backLogin(id)}
                                 >
                                     <span className="backImg"/>
                                     <span className="backTitle">返回登录</span>
