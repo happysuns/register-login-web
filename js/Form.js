@@ -23,14 +23,14 @@ class Form extends React.Component {
     }
 
     render() {
-        const {config, ...props} = this.props;
+        const {config, buttonLabel = '登录', ...props} = this.props;
         return (
             <form className="form"
                   {...props}
             >
                 {this.renderFormItem(config)}
                 {this.props.children}
-                <button className="submitBtn">登录</button>
+                <button className="submitBtn">{buttonLabel}</button>
             </form>
         )
     }
