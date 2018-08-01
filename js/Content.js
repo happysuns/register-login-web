@@ -44,11 +44,13 @@ class Content extends React.Component {
                                classname="login register"
                                config={registerConfig}
                                title="注册账号-"
+                               buttonLabel="立即注册"
                 />
                 <FormContainer id="resetPassword"
                                classname="login register"
                                config={registerConfig}
                                title="重置密码-"
+                               buttonLabel="重置"
                 />
             </React.Fragment>
 
